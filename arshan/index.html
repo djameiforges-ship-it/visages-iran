@@ -34,72 +34,84 @@
     }
 
     .container {
-      max-width: 820px;
+      max-width: 1000px;
       margin: auto;
       padding: 24px 18px 50px;
     }
+
+    /* PHOTO + IDENTITÉ + CARTE */
 
     .hero {
       background: white;
       border-radius: 14px;
       box-shadow: 0 4px 18px rgba(0,0,0,0.08);
-      margin-bottom: 28px;
-      padding: 20px;
-      display: flex;
+      padding: 10px 22px;
+
+      display: grid;
+      grid-template-columns: 190px 1fr 270px;
       align-items: center;
       gap: 28px;
+
+      margin-bottom: 32px;
     }
 
-    .hero .portrait {
-      width: 180px;
-      height: 220px;
+    .portrait {
+      width: 190px;
+      height: 230px;
       object-fit: cover;
       border-radius: 10px;
-      flex-shrink: 0;
     }
 
-    .hero-text {
-      padding: 0;
+    .hero-center {
+      text-align: left;
+    }
+
+    .hero-center h2 {
+      font-size: 2rem;
+      line-height: 1.1;
+      margin: 0 0 18px 0;
     }
 
     .age {
       color: #b71c1c;
-      font-size: 1.15rem;
+      font-size: 1.2rem;
       font-weight: bold;
       text-transform: uppercase;
       letter-spacing: 1px;
+      margin-bottom: 14px;
     }
 
     .death-date {
-      margin-top: 3px;
-      color: #555;
-      font-size: 1rem;
+      color: #222;
+      font-size: 1.1rem;
       font-weight: bold;
-    }
-
-    h2 {
-      font-size: 2.1rem;
-      margin: 6px 0 4px;
+      margin-bottom: 7px;
     }
 
     .location {
       color: #666;
       font-size: 1.05rem;
+      margin-bottom: 7px;
     }
 
     .student {
-      margin-top: 8px;
       font-size: 1.05rem;
       font-weight: bold;
     }
 
     .personality {
-      margin-top: 15px;
+      margin-top: 12px;
       color: #b71c1c;
-      font-size: 1.25rem;
+      font-size: 1.1rem;
       line-height: 1.2;
       font-weight: 800;
       letter-spacing: 0.5px;
+    }
+
+    .iran-map {
+      width: 270px;
+      height: 220px;
+      object-fit: contain;
     }
 
     .quote {
@@ -148,30 +160,93 @@
       font-size: 0.9rem;
     }
 
-    @media (max-width: 600px) {
+    @media (max-width: 850px) {
+
       .hero {
-        gap: 16px;
-        padding: 14px;
+        grid-template-columns: 160px 1fr 210px;
+        gap: 18px;
       }
 
-      .hero .portrait {
-        width: 120px;
-        height: 150px;
+      .portrait {
+        width: 160px;
+        height: 205px;
       }
 
-      .hero h2 {
-        font-size: 1.55rem;
-        line-height: 1.15;
+      .iran-map {
+        width: 210px;
+        height: 190px;
+      }
+
+      .hero-center h2 {
+        font-size: 1.65rem;
       }
 
       .age {
+        font-size: 1.05rem;
+      }
+    }
+
+    @media (max-width: 650px) {
+
+      .container {
+        padding: 15px 10px 40px;
+      }
+
+      .hero {
+        padding: 14px;
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+      }
+
+      .portrait {
+        grid-column: 1;
+        grid-row: 1;
+        width: 100%;
+        height: 200px;
+      }
+
+      .iran-map {
+        grid-column: 2;
+        grid-row: 1;
+        width: 100%;
+        height: 200px;
+      }
+
+      .hero-center {
+        grid-column: 1 / 3;
+        grid-row: 2;
+        text-align: center;
+        padding-top: 5px;
+      }
+
+      .hero-center h2 {
+        font-size: 1.7rem;
+        margin-bottom: 12px;
+      }
+
+      .age {
+        font-size: 1rem;
+        margin-bottom: 8px;
+      }
+
+      .death-date {
+        font-size: 0.95rem;
+      }
+
+      .location,
+      .student {
         font-size: 0.95rem;
       }
 
       .personality {
         font-size: 1rem;
       }
+
+      .quote {
+        font-size: 1.1rem;
+      }
     }
+
   </style>
 </head>
 
@@ -184,23 +259,26 @@
 
 <div class="container">
 
+  <!-- ARSHAN : PHOTO + IDENTITÉ + CARTE -->
+
   <section class="hero">
 
-    <img class="portrait"
-         src="Arshan.png"
-         alt="Portrait d'Arshan Ghassemi">
+    <img
+      class="portrait"
+      src="Arshan.png"
+      alt="Portrait d'Arshan Ghassemi">
 
-    <div class="hero-text">
+    <div class="hero-center">
+
+      <h2>Arshan Ghassemi</h2>
 
       <div class="age">
-        Il avait 18 ans
+        IL AVAIT 18 ANS
       </div>
 
       <div class="death-date">
         Tué le 8 janvier 2026
       </div>
-
-      <h2>Arshan Ghassemi</h2>
 
       <div class="location">
         Téhéran — Iran
@@ -215,6 +293,11 @@
       </div>
 
     </div>
+
+    <img
+      class="iran-map"
+      src="Iran teheran.png"
+      alt="Carte de l'Iran situant Téhéran">
 
   </section>
 
