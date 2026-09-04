@@ -36,46 +36,46 @@
     }
 
     .container {
-      max-width: 900px;
+      max-width: 1000px;
       margin: auto;
       padding: 24px 18px 50px;
     }
 
 
-    /* =========================
-       PHOTO + IDENTITÉ + CARTE
-       ========================= */
+    /* ========================================
+       PRÉSENTATION : PHOTO / IDENTITÉ / CARTE
+       ======================================== */
 
     .hero {
       background: white;
       border-radius: 14px;
       box-shadow: 0 4px 18px rgba(0,0,0,0.08);
-      margin-bottom: 28px;
-      padding: 20px;
+
+      padding: 10px 22px;
 
       display: grid;
-      grid-template-columns: 190px 1fr 190px;
+      grid-template-columns: 190px 1fr 270px;
       align-items: center;
-      gap: 25px;
-    }
+      gap: 28px;
 
-    .portrait,
-    .iran-map {
-      width: 190px;
-      height: 230px;
-      border-radius: 10px;
+      margin-bottom: 32px;
     }
 
     .portrait {
+      width: 190px;
+      height: 230px;
       object-fit: cover;
-    }
-
-    .iran-map {
-      object-fit: contain;
+      border-radius: 10px;
     }
 
     .hero-center {
       text-align: left;
+    }
+
+    .hero-center h2 {
+      font-size: 2rem;
+      line-height: 1.1;
+      margin: 0 0 18px 0;
     }
 
     .age {
@@ -84,43 +84,47 @@
       font-weight: bold;
       text-transform: uppercase;
       letter-spacing: 1px;
+      margin-bottom: 14px;
     }
 
     .death-date {
-      margin-top: 3px;
-      color: #555;
-      font-size: 1rem;
+      color: #222;
+      font-size: 1.1rem;
       font-weight: bold;
-    }
-
-    h2 {
-      font-size: 2rem;
-      margin: 10px 0 5px;
-      line-height: 1.1;
+      margin-bottom: 7px;
     }
 
     .location {
       color: #666;
       font-size: 1.05rem;
+      margin-bottom: 7px;
     }
 
     .student {
-      margin-top: 7px;
       font-size: 1.05rem;
       font-weight: bold;
     }
 
+    .iran-map {
+      width: 270px;
+      height: 220px;
+      object-fit: contain;
+    }
 
-    /* =========================
+
+    /* ========================================
        SHAHNAMEH
-       ========================= */
+       ======================================== */
 
     .shahnameh {
-      margin: 30px 0 38px;
+      margin: 32px 0 38px;
       padding: 24px;
+
       background: white;
+
       border-top: 4px solid #b71c1c;
       border-radius: 10px;
+
       box-shadow: 0 3px 12px rgba(0,0,0,0.06);
     }
 
@@ -137,9 +141,9 @@
     }
 
 
-    /* =========================
+    /* ========================================
        RÉCIT
-       ========================= */
+       ======================================== */
 
     h3 {
       margin-top: 36px;
@@ -153,28 +157,47 @@
     .quote {
       margin: 26px 0;
       padding: 20px;
+
       border-left: 5px solid #b71c1c;
+
       background: #fff7f7;
+
       font-size: 1.25rem;
       font-weight: bold;
     }
 
+
+    /* ========================================
+       SOURCE
+       ======================================== */
+
     .source {
       margin-top: 40px;
       padding-top: 20px;
+
       border-top: 1px solid #ccc;
+
       font-size: 0.95rem;
       color: #555;
     }
 
+
+    /* ========================================
+       CONTACT
+       ======================================== */
+
     .contact {
       margin-top: 30px;
       padding: 20px;
+
       background: #111;
       color: white;
+
       border-radius: 10px;
+
       text-align: center;
     }
+
 
     footer {
       text-align: center;
@@ -184,51 +207,104 @@
     }
 
 
-    /* =========================
-       TÉLÉPHONE
-       ========================= */
+    /* ========================================
+       TABLETTE
+       ======================================== */
 
-    @media (max-width: 700px) {
+    @media (max-width: 850px) {
 
       .hero {
+        grid-template-columns: 160px 1fr 210px;
+        gap: 18px;
+      }
+
+      .portrait {
+        width: 160px;
+        height: 205px;
+      }
+
+      .iran-map {
+        width: 210px;
+        height: 190px;
+      }
+
+      .hero-center h2 {
+        font-size: 1.65rem;
+      }
+
+      .age {
+        font-size: 1.05rem;
+      }
+    }
+
+
+    /* ========================================
+       TÉLÉPHONE
+       ======================================== */
+
+    @media (max-width: 650px) {
+
+      .container {
+        padding: 15px 10px 40px;
+      }
+
+      .hero {
+        padding: 14px;
+
         grid-template-columns: 1fr 1fr;
         gap: 12px;
-        padding: 14px;
-      }
-
-      .portrait,
-      .iran-map {
-        width: 100%;
-        height: 180px;
-      }
-
-      .hero-center {
-        grid-column: 1 / 3;
-        grid-row: 2;
-        text-align: center;
       }
 
       .portrait {
         grid-column: 1;
         grid-row: 1;
+
+        width: 100%;
+        height: 200px;
       }
 
       .iran-map {
         grid-column: 2;
         grid-row: 1;
+
+        width: 100%;
+        height: 200px;
+      }
+
+      .hero-center {
+        grid-column: 1 / 3;
+        grid-row: 2;
+
+        text-align: center;
+
+        padding-top: 5px;
+      }
+
+      .hero-center h2 {
+        font-size: 1.7rem;
+        margin-bottom: 12px;
       }
 
       .age {
         font-size: 1rem;
+        margin-bottom: 8px;
       }
 
-      h2 {
-        font-size: 1.65rem;
+      .death-date {
+        font-size: 0.95rem;
       }
 
       .location,
       .student {
         font-size: 0.95rem;
+      }
+
+      .shahnameh {
+        padding: 18px;
+      }
+
+      .quote {
+        font-size: 1.1rem;
       }
     }
 
@@ -240,342 +316,345 @@
 <body>
 
 
-<header>
+  <!-- ========================================
+       EN-TÊTE DU SITE
+       ======================================== -->
 
-  <h1>VISAGES D'IRAN</h1>
+  <header>
 
-  <p>
-    Derrière chaque nom, une vie.
-  </p>
+    <h1>VISAGES D'IRAN</h1>
 
-</header>
+    <p>
+      Derrière chaque nom, une vie.
+    </p>
 
-
-
-<div class="container">
-
-
-  <!-- =========================
-       PHOTO + IDENTITÉ + CARTE
-       ========================= -->
-
-  <section class="hero">
+  </header>
 
 
-    <!-- PHOTO DE ROHAM -->
 
-    <img
-      class="portrait"
-      src="Roham BARDJESTEH.png"
-      alt="Portrait de Roham BARDJESTEH">
+  <div class="container">
 
 
-    <!-- IDENTITÉ -->
+    <!-- ========================================
+         ROHAM : PHOTO / IDENTITÉ / CARTE
+         ======================================== -->
 
-    <div class="hero-center">
+    <section class="hero">
 
-      <div class="age">
-        Il avait 11 ans
+
+      <!-- PHOTO -->
+
+      <img
+        class="portrait"
+        src="Roham BARDJESTEH.png"
+        alt="Portrait de Roham BARDJESTEH">
+
+
+      <!-- IDENTITÉ -->
+
+      <div class="hero-center">
+
+        <h2>
+          Roham BARDJESTEH
+        </h2>
+
+        <div class="age">
+          IL AVAIT 11 ANS
+        </div>
+
+        <div class="death-date">
+          Tué le 8 janvier 2026
+        </div>
+
+        <div class="location">
+          Neyshabur, Khorassan — Iran
+        </div>
+
+        <div class="student">
+          Écolier
+        </div>
+
       </div>
 
-      <div class="death-date">
-        Tué le 8 janvier 2026
+
+      <!-- CARTE -->
+
+      <img
+        class="iran-map"
+        src="Iran Khorassan.png"
+        alt="Carte de l'Iran situant le Khorassan">
+
+
+    </section>
+
+
+
+    <!-- ========================================
+         LE PRÉNOM ROHAM
+         ======================================== -->
+
+    <section class="shahnameh">
+
+      <h3>
+        Roham, le nom d’un héros
+      </h3>
+
+      <p>
+        <strong>Roham (رهام)</strong> est un prénom ancien
+        de la tradition épique persane.
+      </p>
+
+      <p>
+        Dans le <em>Shahnameh</em> —
+        le <em>Livre des Rois</em> de Ferdowsi —
+        Roham est le nom d’un
+        <strong>héros et guerrier iranien</strong>
+        de la maison de Goudarz.
+      </p>
+
+      <p>
+        Des siècles plus tard,
+        un enfant iranien portait ce même prénom.
+      </p>
+
+      <div class="shahnameh-ending">
+
+        Il s’appelait Roham BARDJESTEH.
+        <br>
+        Il avait 11 ans.
+
       </div>
 
-      <h2>
-        Roham BARDJESTEH
-      </h2>
-
-      <div class="location">
-        Neyshabur, Khorassan — Iran
-      </div>
-
-      <div class="student">
-        Écolier
-      </div>
-
-    </div>
-
-
-    <!-- CARTE -->
-
-    <img
-      class="iran-map"
-      src="Iran Khorassan.png"
-      alt="Carte de l'Iran situant le Khorassan">
-
-
-  </section>
+    </section>
 
 
 
-  <!-- =========================
-       LE PRÉNOM ROHAM
-       ========================= -->
-
-  <section class="shahnameh">
+    <!-- ========================================
+         LE RÉCIT DE ROHAM
+         ======================================== -->
 
     <h3>
-      Roham, le nom d’un héros
+      Roham BARDJESTEH — 11 ans
     </h3>
 
+
     <p>
-      <strong>Roham (رهام)</strong> est un prénom ancien
-      de la tradition épique persane.
+      Roham BARDJESTEH avait <strong>11 ans</strong>.
+      Il était écolier et vivait à
+      <strong>Neyshabur, dans le Khorassan Razavi</strong>.
     </p>
 
     <p>
-      Dans le <em>Shahnameh</em> —
-      le <em>Livre des Rois</em> de Ferdowsi —
-      Roham est le nom d’un
-      <strong>héros et guerrier iranien</strong>
-      de la maison de Goudarz.
+      Il vivait avec son père.
+      Sa mère, séparée de son père,
+      résidait à Téhéran.
     </p>
 
     <p>
-      Des siècles plus tard,
-      un enfant iranien portait ce même prénom.
+      Roham et son père étaient unis
+      par un lien affectif extrêmement profond.
     </p>
 
-    <div class="shahnameh-ending">
 
-      Il s’appelait Roham BARDJESTEH.
-      <br>
-      Il avait 11 ans.
+    <div class="quote">
+
+      Son père considérait Roham comme
+      sa seule raison de vivre
+      et tout ce qu’il possédait dans la vie.
 
     </div>
 
-  </section>
+
+
+    <h3>
+      Le 8 janvier 2026
+    </h3>
+
+
+    <p>
+      Dans la soirée du <strong>8 janvier 2026</strong>,
+      alors que des manifestations avaient lieu
+      dans tout le pays,
+      Roham se trouvait avec son père
+      dans les rues de Neyshabur.
+    </p>
+
+    <p>
+      Il a été
+      <strong>directement visé par les tirs
+      des forces de sécurité</strong>
+      et a perdu la vie.
+    </p>
+
+
+    <div class="quote">
+
+      Roham avait 11 ans.
+
+    </div>
 
 
 
-  <!-- =========================
-       HISTOIRE DE ROHAM
-       ========================= -->
-
-  <h3>
-    Roham BARDJESTEH — 11 ans
-  </h3>
+    <h3>
+      Son corps n’a pas été rendu à sa famille
+    </h3>
 
 
-  <p>
-    Roham BARDJESTEH avait <strong>11 ans</strong>.
-    Il était écolier et vivait à
-    <strong>Neyshabur, dans le Khorassan Razavi</strong>.
-  </p>
+    <p>
+      Après sa mort,
+      les organismes de sécurité ont refusé
+      de remettre le corps de l’enfant
+      à sa famille.
+    </p>
 
-  <p>
-    Il vivait avec son père.
-    Sa mère, séparée de son père,
-    résidait à Téhéran.
-  </p>
-
-  <p>
-    Roham et son père étaient unis
-    par un lien affectif extrêmement profond.
-  </p>
+    <p>
+      Le soir même,
+      des agents ont enterré Roham
+      <strong>dans le plus grand secret</strong>,
+      sans la présence et sans même en informer
+      son père, sa mère
+      ou les autres membres de sa famille.
+    </p>
 
 
-  <div class="quote">
+    <div class="quote">
 
-    Son père considérait Roham comme
-    sa seule raison de vivre
-    et tout ce qu’il possédait dans la vie.
+      Sa famille n’a même pas pu
+      lui dire adieu.
+
+    </div>
+
+
+
+    <h3>
+      Sa mère ne savait pas que son fils était mort
+    </h3>
+
+
+    <p>
+      Au moment des faits,
+      la mère de Roham se trouvait
+      à l’étranger.
+    </p>
+
+    <p>
+      En raison de la
+      <strong>coupure et du blocage généralisés d’Internet</strong>,
+      elle est restée pendant un certain temps
+      sans savoir que son fils avait été tué.
+    </p>
+
+    <p>
+      Ce n’est qu’après le rétablissement
+      des communications
+      qu’elle a appris ce qui était arrivé
+      à Roham.
+    </p>
+
+    <p>
+      Elle est immédiatement retournée en Iran.
+    </p>
+
+    <p>
+      Mais les agents ne lui ont pas permis
+      de voir le corps de son fils
+      ni de lui faire ses adieux.
+    </p>
+
+
+    <div class="quote">
+
+      Ils lui ont seulement communiqué
+      l’adresse exacte de sa tombe.
+
+    </div>
+
+
+
+    <h3>
+      Une famille empêchée de faire son deuil
+    </h3>
+
+
+    <p>
+      Les organismes de sécurité
+      ont exercé de fortes pressions
+      afin d’empêcher toute diffusion d’informations,
+      ainsi que l’organisation de funérailles,
+      de l’inhumation et de cérémonies de deuil.
+    </p>
+
+    <p>
+      Pendant des mois,
+      la famille de Roham est restée
+      <strong>sous surveillance
+      et soumise à des menaces répétées</strong>.
+    </p>
+
+    <p>
+      C’est pour cette raison
+      que son nom et ses photographies
+      sont restés cachés pendant environ
+      <strong>40 jours après sa mort</strong>
+      et n’ont pas pu être rendus publics.
+    </p>
+
+
+    <div class="quote">
+
+      Roham avait 11 ans.
+      <br><br>
+      Sa famille n’a même pas pu lui dire adieu.
+
+    </div>
+
+
+
+    <!-- ========================================
+         SOURCE
+         ======================================== -->
+
+    <div class="source">
+
+      <strong>
+        Source du récit : Narrata
+      </strong>
+
+      <br><br>
+
+      Traduction française à partir
+      du récit original publié en persan.
+
+    </div>
+
+
+
+    <!-- ========================================
+         CONTACT
+         ======================================== -->
+
+    <div class="contact">
+
+      Vous souhaitez laisser un message de soutien ?
+
+      <br><br>
+
+      <strong>
+        messages@visages-iran.org
+      </strong>
+
+    </div>
+
 
   </div>
 
 
 
-  <h3>
-    Le 8 janvier 2026
-  </h3>
+  <footer>
 
+    Visages d'Iran — Derrière chaque nom, une vie.
 
-  <p>
-    Dans la soirée du <strong>8 janvier 2026</strong>,
-    alors que des manifestations avaient lieu
-    dans tout le pays,
-    Roham se trouvait avec son père
-    dans les rues de Neyshabur.
-  </p>
-
-  <p>
-    Il a été
-    <strong>directement visé par les tirs
-    des forces de sécurité</strong>
-    et a perdu la vie.
-  </p>
-
-
-  <div class="quote">
-
-    Roham avait 11 ans.
-
-  </div>
-
-
-
-  <h3>
-    Son corps n’a pas été rendu à sa famille
-  </h3>
-
-
-  <p>
-    Après sa mort,
-    les organismes de sécurité ont refusé
-    de remettre le corps de l’enfant
-    à sa famille.
-  </p>
-
-  <p>
-    Le soir même,
-    des agents ont enterré Roham
-    <strong>dans le plus grand secret</strong>,
-    sans la présence et sans même en informer
-    son père, sa mère
-    ou les autres membres de sa famille.
-  </p>
-
-
-  <div class="quote">
-
-    Sa famille n’a même pas pu
-    lui dire adieu.
-
-  </div>
-
-
-
-  <h3>
-    Sa mère ne savait pas que son fils était mort
-  </h3>
-
-
-  <p>
-    Au moment des faits,
-    la mère de Roham se trouvait
-    à l’étranger.
-  </p>
-
-  <p>
-    En raison de la
-    <strong>coupure et du blocage généralisés d’Internet</strong>,
-    elle est restée pendant un certain temps
-    sans savoir que son fils avait été tué.
-  </p>
-
-  <p>
-    Ce n’est qu’après le rétablissement
-    des communications
-    qu’elle a appris ce qui était arrivé
-    à Roham.
-  </p>
-
-  <p>
-    Elle est immédiatement retournée en Iran.
-  </p>
-
-  <p>
-    Mais les agents ne lui ont pas permis
-    de voir le corps de son fils
-    ni de lui faire ses adieux.
-  </p>
-
-
-  <div class="quote">
-
-    Ils lui ont seulement communiqué
-    l’adresse exacte de sa tombe.
-
-  </div>
-
-
-
-  <h3>
-    Une famille empêchée de faire son deuil
-  </h3>
-
-
-  <p>
-    Les organismes de sécurité
-    ont exercé de fortes pressions
-    afin d’empêcher toute diffusion d’informations,
-    ainsi que l’organisation d’une cérémonie funéraire,
-    de l’inhumation et de cérémonies de deuil.
-  </p>
-
-  <p>
-    Pendant des mois,
-    la famille de Roham est restée
-    <strong>sous surveillance
-    et soumise à des menaces répétées</strong>.
-  </p>
-
-  <p>
-    C’est pour cette raison
-    que son nom et ses photographies
-    sont restés cachés pendant environ
-    <strong>40 jours après sa mort</strong>
-    et n’ont pas pu être rendus publics.
-  </p>
-
-
-  <div class="quote">
-
-    Roham avait 11 ans.
-    <br><br>
-    Sa famille n’a même pas pu lui dire adieu.
-
-  </div>
-
-
-
-  <!-- =========================
-       SOURCE
-       ========================= -->
-
-  <div class="source">
-
-    <strong>
-      Source du récit : Narrata
-    </strong>
-
-    <br><br>
-
-    Traduction française à partir
-    du récit original publié en persan.
-
-  </div>
-
-
-
-  <!-- =========================
-       CONTACT
-       ========================= -->
-
-  <div class="contact">
-
-    Vous souhaitez laisser
-    un message de soutien ?
-
-    <br><br>
-
-    <strong>
-      messages@visages-iran.org
-    </strong>
-
-  </div>
-
-
-</div>
-
-
-
-<footer>
-
-  Visages d'Iran — Derrière chaque nom, une vie.
-
-</footer>
+  </footer>
 
 
 </body>
